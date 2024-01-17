@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rent a Car</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    .section-title {
+      margin-bottom: 10px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="date"],
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+
+    .btn {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+     <h1> <a href="index.html" style="text-decoration: none; color: #fff;" > Rent a Car </a>
+   </h1>
+  </header>
+
+  <main>
+    <div class="logout-form">
+      <form action="logout.php" method="post">
+        <button type="submit" class="btn">Logout</button>
+      </form>
+    </div>
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Choose Date</h2>
+        <form action="process_rent.php" method="post">
+          <label for="date">Date:</label>
+          <input type="date" id="date" name="date" required>
+
+          <h2 class="section-title">Choose Location</h2>
+          <select name="location" id="location">
+      <option value="New York">New York</option>
+      <option value="Los Angeles">Los Angeles</option>
+      <option value="Chicago">Chicago</option>
+    </select>
+
+          <h2 class="section-title">Choose Car</h2>
+          <label for="car">Car:</label>
+          <select id="car" name="car" required>
+            <option value="">Select a car</option>
+            <option value="Toyota RAV4">Toyota RAV4</option>
+            <option value="Honda Civic">Honda Civic</option>
+            <option value="Ford Mustang">Ford Mustang</option>
+          </select>
+
+          <button type="submit" class="btn">Rent Now</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Rent a Car. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
